@@ -14,6 +14,7 @@
 		92AC57E52C3C7ED100D72D98 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC57E42C3C7ED100D72D98 /* Persistence.swift */; };
 		92AC57E82C3C7ED100D72D98 /* LetsLearn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92AC57E62C3C7ED100D72D98 /* LetsLearn.xcdatamodeld */; };
 		92E3FCE42C43040900CACFF2 /* VstackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E3FCE32C43040900CACFF2 /* VstackView.swift */; };
+		92E3FCE62C430B3A00CACFF2 /* AlignmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E3FCE52C430B3A00CACFF2 /* AlignmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		92AC57E42C3C7ED100D72D98 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		92AC57E72C3C7ED100D72D98 /* LetsLearn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LetsLearn.xcdatamodel; sourceTree = "<group>"; };
 		92E3FCE32C43040900CACFF2 /* VstackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VstackView.swift; sourceTree = "<group>"; };
+		92E3FCE52C430B3A00CACFF2 /* AlignmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				92AC57DB2C3C7ED000D72D98 /* LetsLearnApp.swift */,
 				92AC57DD2C3C7ED000D72D98 /* ContentView.swift */,
 				92E3FCE32C43040900CACFF2 /* VstackView.swift */,
+				92E3FCE52C430B3A00CACFF2 /* AlignmentView.swift */,
 				92AC57DF2C3C7ED100D72D98 /* Assets.xcassets */,
 				92AC57E42C3C7ED100D72D98 /* Persistence.swift */,
 				92AC57E62C3C7ED100D72D98 /* LetsLearn.xcdatamodeld */,
@@ -150,6 +153,7 @@
 				92E3FCE42C43040900CACFF2 /* VstackView.swift in Sources */,
 				92AC57E52C3C7ED100D72D98 /* Persistence.swift in Sources */,
 				92AC57DE2C3C7ED000D72D98 /* ContentView.swift in Sources */,
+				92E3FCE62C430B3A00CACFF2 /* AlignmentView.swift in Sources */,
 				92AC57DC2C3C7ED000D72D98 /* LetsLearnApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
