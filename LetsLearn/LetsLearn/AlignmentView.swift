@@ -9,7 +9,45 @@ import SwiftUI
 
 struct AlignmentView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hello, World!")
+        VStack {
+            HStack {
+                Rectangle()
+                    .foregroundStyle(.pink).frame(width: 25)
+                Spacer()
+                Text("leading")
+                Spacer()
+                Text("center")
+                Spacer()
+                Text("trailing")
+                    .padding(.trailing)
+            }
+            .border(Color.pink)
+        }
+        HStack {
+            Rectangle()
+                .foregroundStyle(.pink).frame(width: 25)
+            Spacer()
+            Text("leading")
+            Spacer()
+            Text("center")
+            Spacer()
+            Text("trailing")
+                .padding(.trailing)
+        }
+        .border(Color.pink)
+        HStack {
+            Rectangle()
+                .foregroundStyle(.pink).frame(width: 25)
+            Spacer()
+            Text("leading")
+            Spacer()
+            Text("center")
+            Spacer()
+            Text("trailing")
+                .padding(.trailing)
+        }
+        .border(Color.pink)
     }
 }
 
