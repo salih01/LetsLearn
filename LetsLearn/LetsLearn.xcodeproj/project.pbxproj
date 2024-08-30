@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		925C61712C82484F000D3BA1 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C61702C82484F000D3BA1 /* FrameView.swift */; };
 		92AC57DC2C3C7ED000D72D98 /* LetsLearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC57DB2C3C7ED000D72D98 /* LetsLearnApp.swift */; };
 		92AC57DE2C3C7ED000D72D98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC57DD2C3C7ED000D72D98 /* ContentView.swift */; };
 		92AC57E02C3C7ED100D72D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92AC57DF2C3C7ED100D72D98 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		925C61702C82484F000D3BA1 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		92AC57D82C3C7ED000D72D98 /* LetsLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AC57DB2C3C7ED000D72D98 /* LetsLearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsLearnApp.swift; sourceTree = "<group>"; };
 		92AC57DD2C3C7ED000D72D98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				92AC57E42C3C7ED100D72D98 /* Persistence.swift */,
 				92AC57E62C3C7ED100D72D98 /* LetsLearn.xcdatamodeld */,
 				92AC57E12C3C7ED100D72D98 /* Preview Content */,
+				925C61702C82484F000D3BA1 /* FrameView.swift */,
 			);
 			path = LetsLearn;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				925C61712C82484F000D3BA1 /* FrameView.swift in Sources */,
 				92AC57E82C3C7ED100D72D98 /* LetsLearn.xcdatamodeld in Sources */,
 				92E3FCE42C43040900CACFF2 /* VstackView.swift in Sources */,
 				92AC57E52C3C7ED100D72D98 /* Persistence.swift in Sources */,
