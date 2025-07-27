@@ -7,16 +7,43 @@
 
 import UIKit
 
+enum AppMode: String {
+    case easy
+    case mid
+    case hard
+
+    static var current: AppMode {
+        let raw = Bundle.main.infoDictionary?["AppMode"] as? String ?? "easy"
+        return AppMode(rawValue: raw) ?? .easy
+    }
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        let window = UIWindow(windowScene: windowScene)
+
+        let storyboardName: String
+        switch AppMode.current {
+        case .easy:
+            storyboardName = "EasyLevel"
+        case .mid:
+            storyboardName = "MidLevel"
+        case .hard:
+            storyboardName = "HardLevel"
+        }
+
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        let initialVC = storyboard.instantiateInitialViewController()!
+
+        window.rootViewController = UINavigationController(rootViewController: initialVC)
+        self.window = window
+        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
