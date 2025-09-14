@@ -11,9 +11,12 @@ class EasyLevelViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let topics: [Topic] = [
-        Topic(title: "Struct Vs Class", controller: StructVsClassViewController.self)
+    private let topics: [Topic] = [
+        Topic(title: "Struct vs Class", screen: .structVsClass),
+        Topic(title: "Memory Management", screen: .memoryManagement),
+        Topic(title: "View Lifecycle", screen: .viewLifecycle)
     ]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +50,7 @@ extension EasyLevelViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let topic = topics[indexPath.row]
-        let vc = topic.controller.init()
+        let vc = ScreenFactory.makeViewController(for: topic.screen)
         navigationController?.pushViewController(vc, animated: true)
     }
     

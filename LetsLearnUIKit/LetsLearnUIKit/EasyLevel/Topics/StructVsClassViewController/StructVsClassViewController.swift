@@ -16,3 +16,11 @@ class StructVsClassViewController: UIViewController {
     }
 
 }
+
+struct SampleStruct {
+    
+}
+
+class SampleClass {
+    
+}
