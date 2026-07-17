@@ -2,7 +2,9 @@
 //  EasyLevelViewController.swift
 //  LetsLearnUIKit
 //
-//  Created by Mehmet Salih ÇAKMAK (Mobil Uygulamalar Uygulama Geliştirme Müdürlüğü) on 26.07.2025.
+//  Yeni konu eklemek için:
+//  1. Topics klasörüne yeni bir ViewController dosyası ekle
+//  2. Aşağıdaki topics dizisine bir satır ekle
 //
 
 import UIKit
@@ -10,51 +12,40 @@ import UIKit
 class EasyLevelViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
-    private let topics: [Topic] = [
-        Topic(title: "Struct vs Class", screen: .structVsClass),
-        Topic(title: "Memory Management", screen: .memoryManagement),
-        Topic(title: "View Lifecycle", screen: .viewLifecycle)
+
+    let topics: [(title: String, makeVC: () -> UIViewController)] = [
+        ("Struct vs Class", { StructVsClassViewController() }),
+        ("Memory Management", { MemoryManagementViewController() }),
+        ("View Lifecycle", { ViewLifecycleViewController() })
     ]
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadUI()
-    }
-    
-    func loadUI() {
+        title = "UIKit Konuları"
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "EasyTopicCell", bundle: nil),
                            forCellReuseIdentifier: "EasyTopicCell")
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 60
     }
-
 }
 
 extension EasyLevelViewController: UITableViewDelegate, UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return topics.count
+        topics.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "EasyTopicCell") as? EasyTopicCell else {
-            return UITableViewCell()
-        }
-        let topic = topics[indexPath.row]
-        cell.label.text = topic.title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EasyTopicCell", for: indexPath) as! EasyTopicCell
+        cell.label.text = topics[indexPath.row].title
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let topic = topics[indexPath.row]
-        let vc = ScreenFactory.makeViewController(for: topic.screen)
+        let vc = topic.makeVC()
+        vc.title = topic.title
         navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
     }
 }

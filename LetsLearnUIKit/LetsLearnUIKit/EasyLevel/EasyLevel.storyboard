@@ -11,7 +11,7 @@
         <!--Easy Level View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="StructVsClassViewController" id="Y6W-OH-hqX" customClass="EasyLevelViewController" customModule="LetsLearnUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EasyLevelViewController" id="Y6W-OH-hqX" customClass="EasyLevelViewController" customModule="LetsLearnUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +89,7 @@
         <scene sceneID="hvS-h1-o9M">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jCd-Hu-ufd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Qnx-5f-2JZ"/>
+                    <tabBarItem key="tabBarItem" title="Easy" id="Qnx-5f-2JZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uQd-9E-kKQ">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -108,7 +108,7 @@
         <scene sceneID="Yx3-jC-uQb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7IU-b7-0mK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="dHm-WM-xzl"/>
+                    <tabBarItem key="tabBarItem" title="Mid" id="dHm-WM-xzl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="P7t-2n-vJa">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

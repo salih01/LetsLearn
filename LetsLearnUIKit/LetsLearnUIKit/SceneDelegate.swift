@@ -41,7 +41,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
         let initialVC = storyboard.instantiateInitialViewController()!
 
-        window.rootViewController = UINavigationController(rootViewController: initialVC)
+        window.rootViewController = initialVC
         self.window = window
         window.makeKeyAndVisible()
     }
